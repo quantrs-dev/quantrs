@@ -1,6 +1,20 @@
 ex:
 	cargo run -p quantrs_examples --bin $(name)
 
+
+
+clean:
+	cargo clean
+
+fmt:
+	cargo fmt -- --check
+
+lint:
+	cargo clippy
+
+check:
+	cargo check
+
 test:
 ifeq ($(name),)
 	@echo "Running all tests"
@@ -19,5 +33,7 @@ else
 	cargo test -p quantrs --test $(name)
 endif
 
-clean:
-	cargo clean
+build:
+	cargo build	
+
+ci: check fmt lint spec test build

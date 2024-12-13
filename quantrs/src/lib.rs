@@ -1,10 +1,10 @@
 pub mod prelude {
-    pub use crate::averages::*;
+    pub use crate::trend::*;
 }
 
 // Feature-gated indicators by category
 #[cfg(feature = "averages")]
-pub mod averages {
+pub mod trend {
     //! Moving averages and related indicators
     mod sma;
     pub use sma::*;
