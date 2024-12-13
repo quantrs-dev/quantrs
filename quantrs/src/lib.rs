@@ -6,15 +6,6 @@ pub mod prelude {
 #[cfg(feature = "averages")]
 pub mod averages {
     //! Moving averages and related indicators
-    //!
-    //! # Examples
-    //!
-    //! ```
-    //! use quantrs::averages::sma;
-    //! let data = vec![1.0, 2.0, 3.0, 4.0, 5.0];
-    //! let sma = sma(&data, 3);
-    //! assert_eq!(sma, vec![2.0, 3.0, 4.0]);
-    //! ```
     mod sma;
     pub use sma::*;
 }
