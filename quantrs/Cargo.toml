@@ -1,0 +1,20 @@
+[package]
+name = "quantrs"
+version = "0.1.0"
+edition = "2021"
+description = "Technical Analysis for trading in Rust"
+license = "MIT"
+repository = "https://github.com/quantrs-dev/quantrs"
+documentation = "https://github.com/quantrs-dev/quantrs"
+
+
+[features]
+default = ["averages"]
+averages = []
+momentum = []
+volatility = []
+volume = []
+all = ["averages", "momentum", "volatility", "volume"]
+
+
+[dependencies]

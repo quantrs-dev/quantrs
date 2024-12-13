@@ -1,0 +1,12 @@
+[package]
+name = "quantrs_examples"
+version = "0.1.0"
+edition = "2021"
+description = "Usage examples for the quantrs crate"
+license = "MIT"
+repository = "https://github.com/quantrs-dev/quantrs"
+documentation = "https://github.com/quantrs-dev/quantrs"
+
+
+[dependencies]
+quantrs = { version = "0.1.0", path = "../quantrs", features = ["all"] }

@@ -1,2 +1,3 @@
 # quantrs
-Technical Analisis for trading in Rust
+
+Technical Analysis for trading in Rust
