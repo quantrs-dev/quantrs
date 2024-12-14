@@ -31,4 +31,5 @@ __pycache__/
 dist/
 build/
 .eggs/
-.env
+.env*
+!*.env.example

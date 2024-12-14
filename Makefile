@@ -47,10 +47,18 @@ publish:
 
 # Python package publishing
 publish-py-test: .venv
+	@if [ -z "$$MATURIN_PASSWORD_TESTPYPI" ]; then \
+		echo "Error: MATURIN_PASSWORD_TESTPYPI is not set"; \
+		exit 1; \
+	fi
 	cd quantrs-py && source .venv/bin/activate && \
 		maturin publish --repository-url https://test.pypi.org/legacy/ --username __token__
 
 publish-py: .venv
+	@if [ -z "$$MATURIN_PASSWORD_PYPI" ]; then \
+		echo "Error: MATURIN_PASSWORD_PYPI is not set"; \
+		exit 1; \
+	fi
 	cd quantrs-py && source .venv/bin/activate && maturin publish --username __token__
 
 # Python virtual environment
