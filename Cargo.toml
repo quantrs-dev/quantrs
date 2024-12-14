@@ -2,5 +2,6 @@
 resolver = "2"
 members = [
   "quantrs",
+  "quantrs-py",
   "examples",
 ]

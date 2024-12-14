@@ -1,0 +1,15 @@
+[package]
+name = "quantrs-py"
+version = "0.1.0"
+edition = "2021"
+description = "Python bindings for the quantrs technical analysis library"
+license = "MIT"
+
+[lib]
+name = "quantrs"
+crate-type = ["cdylib"]
+
+[dependencies]
+quantrs = { path = "../quantrs" }
+pyo3 = { version = "0.19", features = ["extension-module"] }
+numpy = "0.19" 

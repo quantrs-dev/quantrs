@@ -23,3 +23,12 @@ Cargo.lock
 # Added by cargo
 
 /target
+
+# Python packaging
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+.eggs/
+.env

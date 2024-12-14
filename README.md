@@ -30,9 +30,28 @@ use quantrs::prelude::*;
 
 ### Python bindings
 
-Quantrs provides Python bindings for all the indicators via the [quantrs-py](https://github.com/quantrs-dev/quantrs-py) PYPI package, allowing you to use the library in your Python projects.
+Quantrs provides Python bindings via PyO3, allowing you to use the library in your Python projects. Install it using pip:
 
-See the [quantrs-py](https://github.com/quantrs-dev/quantrs-py) repository for more information.
+```bash
+pip install quantrs
+```
+
+Example usage in Python:
+
+```python
+import quantrs
+
+# Calculate SMA
+data = [1.0, 2.0, 3.0, 4.0, 5.0]
+sma_values = quantrs.sma(data, 3)
+print(f"SMA values: {sma_values}")
+
+# Use streaming functionality
+sma_stream = quantrs.SMAStream(3)
+for value in data:
+    sma_value = sma_stream.next(value)
+    print(f"New SMA value: {sma_value}")
+```
 
 ## Usage
 

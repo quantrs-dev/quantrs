@@ -9,4 +9,4 @@ documentation = "https://github.com/quantrs-dev/quantrs"
 
 
 [dependencies]
-quantrs = { version = "0.1.0", path = "../quantrs", features = ["all"] }
+quantrs = { version = "0.1.0", path = "../quantrs" }

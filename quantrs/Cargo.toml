@@ -7,14 +7,4 @@ license = "MIT"
 repository = "https://github.com/quantrs-dev/quantrs"
 documentation = "https://github.com/quantrs-dev/quantrs"
 
-
-[features]
-default = ["averages"]
-averages = []
-momentum = []
-volatility = []
-volume = []
-all = ["averages", "momentum", "volatility", "volume"]
-
-
 [dependencies]
