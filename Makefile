@@ -48,10 +48,10 @@ publish:
 # Python package publishing
 publish-py-test: .venv
 	cd quantrs-py && source .venv/bin/activate && \
-		maturin publish --repository-url https://test.pypi.org/legacy/ --username __token__ --uv
+		maturin publish --repository-url https://test.pypi.org/legacy/ --username __token__
 
 publish-py: .venv
-	cd quantrs-py && source .venv/bin/activate && maturin publish --username __token__ --uv
+	cd quantrs-py && source .venv/bin/activate && maturin publish --username __token__
 
 # Python virtual environment
 .venv:
