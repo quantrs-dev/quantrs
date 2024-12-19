@@ -2,9 +2,11 @@
 
 Technical Analysis Library for Trading in Rust
 
-Quantrs is a Rust library that provides a comprehensive set of technical analysis tools for developing trading applications. It aims to mimic the functionality of the popular [TA-Lib](https://ta-lib.org/) library, offering high-performance implementations of various technical indicators.
+Quantrs is a Rust library that provides a comprehensive set of high-performance technical analysis tools for developing trading applications.
 
-This library is designed to seamlessly add technical analysis capabilities to your trading applications. It is heavily inspired by [ta-rs](https://github.com/gakonst/ta-rs) and aims to provide a robust alternative with a broader range of indicators.
+Designed to be the default go-to technical analysis library for Rust, Quantrs offers implementations of various technical indicators commonly used in financial markets.
+
+This library is designed to seamlessly add technical analysis capabilities to your trading applications. It is heavily inspired by [TA-Lib](https://ta-lib.org/) and aims to provide a robust alternative with a broader range of indicators.
 
 ## Features
 
@@ -85,6 +87,34 @@ fn main() {
 }
 ```
 
+### Calculating the Exponential Moving Average (EMA)
+
+```rust:src/main.rs
+use quantrs::trend::ema;
+
+fn main() {
+    let data = vec![1.0, 2.0, 3.0, 4.0, 5.0];
+    let ema_values = ema(&data, 3);
+    println!("EMA values: {:?}", ema_values);
+}
+```
+
+### Streaming Example for EMA
+
+```rust:src/main.rs
+use quantrs::stream::EMAStream;
+
+fn main() {
+    let mut ema_stream = EMAStream::new(3);
+    let data_stream = vec![1.0, 2.0, 3.0, 4.0, 5.0];
+
+    for value in data_stream {
+        let ema_value = ema_stream.next(value);
+        println!("New EMA value: {:?}", ema_value);
+    }
+}
+```
+
 ## Available Indicators
 
 Quantrs aims to provide a comprehensive set of technical indicators similar to those available in TA-Lib. The indicators are organized into categories for ease of use.
@@ -92,7 +122,7 @@ Quantrs aims to provide a comprehensive set of technical indicators similar to t
 ### Overlap Studies
 
 - [x] SMA: Simple Moving Average
-- [ ] EMA: Exponential Moving Average
+- [x] EMA: Exponential Moving Average
 - [ ] WMA: Weighted Moving Average
 - [ ] DEMA: Double Exponential Moving Average
 - [ ] TEMA: Triple Exponential Moving Average
@@ -218,8 +248,8 @@ Quantrs aims to provide a comprehensive set of technical indicators similar to t
 
 Quantrs provides streaming capabilities for real-time data processing. The streaming feature allows you to update indicator calculations efficiently as new data points become available, without recalculating the entire dataset.
 
-- [ ] **SMAStream**: Streaming Simple Moving Average
-- [ ] **EMAStream**: Streaming Exponential Moving Average
+- [x] **SMAStream**: Streaming Simple Moving Average
+- [x] **EMAStream**: Streaming Exponential Moving Average
 - [ ] **RSIStream**: Streaming Relative Strength Index
 - *...and more streaming indicators to come*
 

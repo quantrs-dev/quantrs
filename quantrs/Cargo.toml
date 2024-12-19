@@ -8,3 +8,4 @@ repository = "https://github.com/quantrs-dev/quantrs"
 documentation = "https://github.com/quantrs-dev/quantrs"
 
 [dependencies]
+ndarray = "0.15"

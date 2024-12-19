@@ -1,7 +1,7 @@
 {
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
   "python.analysis.extraPaths": [
-    "${workspaceFolder}/python"
+    "${workspaceFolder}/quantrs-py/python"
   ],
   "python.analysis.typeCheckingMode": "basic",
   "python.testing.pytestEnabled": true,
@@ -17,5 +17,8 @@
       "source.fixAll.ruff": "explicit",
       "source.organizeImports.ruff": "explicit"
     }
-  }
+  },
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.stubPath": "${workspaceFolder}/quantrs-py/python/quantrs",
+  "python.analysis.autoImportCompletions": true
 }

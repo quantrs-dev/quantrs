@@ -4,9 +4,11 @@ Python bindings for the quantrs technical analysis library.
 
 ## Features
 
-- Fast Rust-powered implementations
+- Fast Rust-powered implementations of standard technical analysis indicators
 - NumPy integration
 - Full type hint support for better IDE experience
+- Production-ready performance for financial applications
+- Comprehensive collection of technical indicators and overlays
 
 ## Installation
 
@@ -42,7 +44,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 Development commands are handled through the Makefile in the root directory:
 
 ```bash
-# Set up development environment (creates venv and installs dependencies)
+# Set up development environment
 make .venv
 
 # Build both Rust and Python packages

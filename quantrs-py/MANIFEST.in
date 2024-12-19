@@ -1,1 +1,1 @@
-include quantrs/*.pyi 
+include python/quantrs/*.pyi 
