@@ -34,7 +34,7 @@ else
 endif
 
 build:
-	cargo build	
+	cargo build -p quantrs
 
 ci: check fmt lint spec test build
 

@@ -1,4 +1,4 @@
-use numpy::{PyArray1, ToPyArray};
+use numpy::{self as np, ToPyArray};
 use pyo3::prelude::*;
 use pyo3::{exceptions::PyValueError, wrap_pyfunction};
 
@@ -14,7 +14,7 @@ fn to_pyerr(e: QuantrsError) -> PyErr {
 }
 
 #[pyfunction]
-fn sma(py: Python, data: Vec<f64>, period: i64) -> PyResult<Py<PyArray1<f64>>> {
+fn sma(py: Python, data: Vec<f64>, period: i64) -> PyResult<Py<np::PyArray1<f64>>> {
     match trend::sma(&data, period as usize) {
         Ok(result) => Ok(result.to_pyarray(py).to_owned()),
         Err(e) => Err(to_pyerr(e)),
